@@ -3,14 +3,14 @@ package es.fpdual.eadmin.eadmin.modelo;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class DocumentoContable extends Documento{
-	
+public class DocumentoContable extends Documento {
+
 	private BigDecimal importe;
 	private String dniInteresado;
-	
-	public DocumentoContable(Integer codigo, String nombre, Date fechaCreacion,Date fechaUltimaActualizacion, Boolean publico,
-			EstadoDocumento estado,BigDecimal importe,String dniInteresado) {
-		super(codigo, nombre, fechaCreacion,fechaUltimaActualizacion,publico, estado);
+
+	public DocumentoContable(Integer codigo, String nombre, Date fechaCreacion, Date fechaUltimaActualizacion,
+			Boolean publico, EstadoDocumento estado, BigDecimal importe, String dniInteresado) {
+		super(codigo, nombre, fechaCreacion, fechaUltimaActualizacion, publico, estado);
 		this.importe = importe;
 		this.dniInteresado = dniInteresado;
 	}
@@ -22,5 +22,5 @@ public class DocumentoContable extends Documento{
 	public String getDniInteresado() {
 		return dniInteresado;
 	}
-	
+
 }

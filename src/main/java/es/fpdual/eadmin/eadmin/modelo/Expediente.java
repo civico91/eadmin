@@ -3,16 +3,16 @@ package es.fpdual.eadmin.eadmin.modelo;
 import java.util.Date;
 import java.util.List;
 
-public class Expediente extends ModeloBaseAdministracionElectronica{
+public class Expediente extends ModeloBaseAdministracionElectronica {
 
 	private Date fechaArchivado;
 	private Boolean publico;
 	private EstadoExpediente estado;
 	private List<Documento> ListaDocumento;
 
-	public Expediente(Integer codigo, String nombre, Date fechaCreacion,Date fechaUltimaActualizacion, Date fechaArchivado, Boolean publico,
-			EstadoExpediente estado, List<Documento> listaDocumento) {
-		super(codigo,nombre,fechaCreacion,fechaUltimaActualizacion);
+	public Expediente(Integer codigo, String nombre, Date fechaCreacion, Date fechaUltimaActualizacion,
+			Date fechaArchivado, Boolean publico, EstadoExpediente estado, List<Documento> listaDocumento) {
+		super(codigo, nombre, fechaCreacion, fechaUltimaActualizacion);
 		this.fechaArchivado = fechaArchivado;
 		this.publico = publico;
 		this.estado = estado;
@@ -48,8 +48,7 @@ public class Expediente extends ModeloBaseAdministracionElectronica{
 		if (obj instanceof Expediente) {
 			return codigo.equals(((Expediente) obj).getCodigo()) && nombre.equals(((Expediente) obj).getNombre())
 					&& fechaCreacion.equals(((Expediente) obj).getFechaCreacion())
-					&& publico.equals(((Expediente) obj).getPublico()) 
-					&& estado.equals(((Expediente) obj).getEstado())
+					&& publico.equals(((Expediente) obj).getPublico()) && estado.equals(((Expediente) obj).getEstado())
 					&& ListaDocumento.equals(((Expediente) obj).getListaDocumento())
 					&& fechaArchivado.equals(((Expediente) obj).getFechaArchivado());
 		}
